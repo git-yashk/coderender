@@ -2,6 +2,7 @@ import ReactCodeMirror from "@uiw/react-codemirror";
 import { html } from "@codemirror/lang-html";
 import { css } from "@codemirror/lang-css";
 import { javascript } from "@codemirror/lang-javascript";
+import FileMenu from "./FileMenu";
 
 export default function CodeEditor({ code, setCodeObj, currentFile, setCurrentFile }) {
 
@@ -13,14 +14,17 @@ export default function CodeEditor({ code, setCodeObj, currentFile, setCurrentFi
 
     return (
         <div>
-            <div className="border border-[#282c34]">
+            <div>
+                <FileMenu currentFile={currentFile} setCurrentFile={setCurrentFile} />
+            </div>
+            <div className="border border-[#000]">
                 <ReactCodeMirror
                     value={code}
                     onChange={value => setCodeObj(prev => ({ ...prev, [currentFile]: value }))}
                     extensions={extensions[currentFile]}
                     theme="dark"
                     autoFocus
-                    height="85vh"
+                    height="80vh"
                     basicSetup={{
                         lineNumbers: true,
                         foldGutter: false,
