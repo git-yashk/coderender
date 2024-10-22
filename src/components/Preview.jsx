@@ -23,7 +23,7 @@ export default function Preview() {
     return (
         <>
             <div>
-                <PreviewActions />
+                <PreviewActions codeObj={codeObj} />
             </div>
             <div className="border border-[#000]">
                 <iframe
