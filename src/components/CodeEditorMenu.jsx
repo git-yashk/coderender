@@ -2,7 +2,7 @@ import HtmlIcon from "./icons/HtmlIcon";
 import CssIcon from "./icons/CssIcon";
 import JavaScriptIcon from "./icons/JavaScriptIcon";
 
-export default function FileMenu({ currentFile, setCurrentFile }) {
+export default function CodeEditorMenu({ currentFile, setCurrentFile }) {
     return (
         <>
             <div className="flex gap-1 bg-[#030712] h-8 border-4 border-[#030712]">
