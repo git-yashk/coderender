@@ -2,7 +2,7 @@ import ReactCodeMirror from "@uiw/react-codemirror";
 import { html } from "@codemirror/lang-html";
 import { css } from "@codemirror/lang-css";
 import { javascript } from "@codemirror/lang-javascript";
-import FileMenu from "./FileMenu";
+import CodeEditorMenu from "./CodeEditorMenu";
 
 export default function CodeEditor({ code, setCodeObj, currentFile, setCurrentFile }) {
 
@@ -15,7 +15,7 @@ export default function CodeEditor({ code, setCodeObj, currentFile, setCurrentFi
     return (
         <div>
             <div>
-                <FileMenu currentFile={currentFile} setCurrentFile={setCurrentFile} />
+                <CodeEditorMenu currentFile={currentFile} setCurrentFile={setCurrentFile} />
             </div>
             <div className="border border-[#000]">
                 <ReactCodeMirror

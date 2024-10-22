@@ -2,6 +2,7 @@ import { useEffect, useState } from "react";
 import CodeEditor from "../components/CodeEditor";
 import Header from "../components/Header";
 import { useCode } from "../contexts/CodeContext";
+import Preview from "../components/Preview";
 
 export default function Home() {
 
@@ -23,6 +24,9 @@ export default function Home() {
                         currentFile={currentFile}
                         setCurrentFile={setCurrentFile}
                     />
+                </div>
+                <div className="border-4 border-black rounded-md border-t-2">
+                    <Preview />
                 </div>
             </div>
         </>
