@@ -1,4 +1,4 @@
-import { previewInNewTab } from "../utils/utils";
+import { downloadProject, previewInNewTab } from "../utils/utils";
 import ArrowIcon from "./icons/ArrowIcon";
 import DownloadIcon from "./icons/DownloadIcon";
 import LinkIcon from "./icons/LinkIcon";
@@ -21,6 +21,8 @@ export default function PreviewActions({ codeObj }) {
                     <ArrowIcon height="12" />
                 </button>
                 <button
+                    onClick={() => downloadProject(codeObj)}
+                    title="Download zip"
                     className="px-2 py-1 rounded flex items-center gap-1 bg-white hover:bg-slate-100"
                 >
                     <DownloadIcon height="12" />
