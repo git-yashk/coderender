@@ -4,6 +4,21 @@
 @tailwind components;
 @tailwind utilities;
 
+/* Hide spinner for Firefox */
+input[type="number"] {
+    /* Firefox */
+    -moz-appearance: textfield;
+}
+
+/* Hide spinner for Chrome, Safari, Edge */
+input[type="number"]::-webkit-inner-spin-button,
+input[type="number"]::-webkit-outer-spin-button {
+    /* Chrome, Safari */
+    -webkit-appearance: none;
+    /* Remove margin */
+    margin: 0;
+}
+
 body {
     font-family: "Fira Code", monospace;
 }
