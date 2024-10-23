@@ -17,11 +17,11 @@ export default function PreviewActions({ codeObj }) {
     }, [codeObj]);
 
     function isShareable() {
-        let flag = codeObj.html.length > 100;
-        flag &= codeObj.html.length < 5000;
-        flag &= codeObj.css.length < 1000;
-        flag &= codeObj.js.length < 2000;
-        setCanShare(!flag);
+        let flag = codeObj.html.length > 100
+            && codeObj.html.length < 5000
+            && codeObj.css.length < 1000
+            && codeObj.js.length < 2000;
+        setCanShare(flag);
     }
 
     async function handleShare() {
@@ -38,7 +38,7 @@ export default function PreviewActions({ codeObj }) {
             <div className="flex gap-1 bg-[#030712] h-8 border-4 border-[#030712]">
                 <button
                     onClick={handleShare}
-                    disabled={canShare}
+                    disabled={!canShare}
                     className="px-2 py-1 rounded flex items-center gap-1 bg-white hover:bg-slate-100 disabled:bg-blue-200"
                     title="index.html length must be > 100"
                 >
