@@ -7,8 +7,9 @@ export default function CodeProvider({ children }) {
 
     const [codeObj, setCodeObj] = useState({ html: example.html, css: example.css, js: example.js });
     const [shareURL, setShareUrl] = useState("");
+    const [canShare, setCanShare] = useState(false);
 
-    const contextObj = { codeObj, setCodeObj, shareURL, setShareUrl };
+    const contextObj = { codeObj, setCodeObj, shareURL, setShareUrl, canShare, setCanShare };
 
     return (
         <codeContext.Provider value={contextObj}>

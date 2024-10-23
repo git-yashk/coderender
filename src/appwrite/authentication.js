@@ -7,7 +7,7 @@ async function emailAuth(email) {
     try {
         const sessionToken = await account.createEmailToken(
             ID.unique(),
-            'email@example.com'
+            email
         );
         return sessionToken.userId;
     } catch (error) {
