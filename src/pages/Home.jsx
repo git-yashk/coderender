@@ -6,6 +6,7 @@ import { useCode } from "../contexts/CodeContext";
 import Preview from "../components/Preview";
 import { useParams } from "react-router-dom";
 import db from '../appwrite/databases';
+import DisplayShareUrl from '../components/DisplayShareUrl';
 
 export default function Home() {
 
@@ -35,6 +36,7 @@ export default function Home() {
     return (
         <>
             <Header />
+            <DisplayShareUrl />
             <div className="grid grid-cols-2 m-5 gap-5">
                 <div className="border-4 border-black rounded-md border-t-2">
                     <CodeEditor

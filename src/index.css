@@ -22,3 +22,19 @@ input[type="number"]::-webkit-outer-spin-button {
 body {
     font-family: "Fira Code", monospace;
 }
+
+@keyframes timeout {
+    0% {
+        width: 100%;
+    }
+
+    100% {
+        width: 0;
+    }
+}
+
+@layer components {
+    .animate-timeout {
+        animation: timeout 20s linear;
+    }
+}
