@@ -1,5 +1,5 @@
 import { Databases, ID } from "appwrite";
-import { client } from "./config";
+import client from "./config";
 import { appwrite } from "../env";
 
 const databases = new Databases(client);
@@ -38,3 +38,5 @@ db["shareCode"] = {
     },
 
 }
+
+export default db;
