@@ -5,4 +5,4 @@ const client = new Client()
     .setEndpoint("https://cloud.appwrite.io/v1")
     .setProject(appwrite.projectID);
 
-export { client };
+export default client;

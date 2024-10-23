@@ -1,5 +1,5 @@
 import { Account, ID } from "appwrite";
-import { client } from "./config";
+import client from "./config";
 
 const account = new Account(client);
 
@@ -39,4 +39,4 @@ async function getCurrentUser() {
     }
 }
 
-
+export { emailAuth, verifyToken, getCurrentUser };
