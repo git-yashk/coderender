@@ -8,20 +8,20 @@ export default function CodeEditorMenu({ currentFile, setCurrentFile }) {
             <div className="flex gap-1 bg-[#030712] h-8 border-4 border-[#030712]">
                 <button onClick={() => setCurrentFile("html")}
                     style={currentFile == "html" ? { backgroundColor: "#fff", color: "#000" } : {}}
-                    className="px-2 py-1 rounded flex items-center gap-1 text-white hover:bg-slate-100 hover:text-black"
+                    className="p-1 md:px-2 rounded flex items-center gap-1 text-white hover:bg-slate-100 hover:text-black"
                 >
                     <HtmlIcon height="18" />
                     <span className="text-sm">index.html</span>
                 </button>
                 <button onClick={() => setCurrentFile("css")}
-                    className="px-2 py-1 rounded flex items-center gap-1 text-white hover:bg-slate-100 hover:text-black"
+                    className="p-1 md:px-2 rounded flex items-center gap-1 text-white hover:bg-slate-100 hover:text-black"
                     style={currentFile == "css" ? { backgroundColor: "#fff", color: "#000" } : {}}
                 >
                     <CssIcon height="18" />
                     <span className="text-sm">style.css</span>
                 </button>
                 <button onClick={() => setCurrentFile("js")}
-                    className="px-2 py-1 rounded flex items-center gap-1 text-white hover:bg-slate-100 hover:text-black"
+                    className="p-1 md:px-2 rounded flex items-center gap-1 text-white hover:bg-slate-100 hover:text-black"
                     style={currentFile == "js" ? { backgroundColor: "#fff", color: "#000" } : {}}
                 >
                     <JavaScriptIcon height="18" />

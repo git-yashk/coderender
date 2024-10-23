@@ -37,7 +37,7 @@ export default function Home() {
         <>
             <Header />
             <DisplayShareUrl />
-            <div className="grid grid-cols-2 m-5 gap-5">
+            <div className="grid grid-cols-1 lg:grid-cols-2 m-5 gap-5">
                 <div className="border-4 border-black rounded-md border-t-2">
                     <CodeEditor
                         code={codeObj[currentFile]}
